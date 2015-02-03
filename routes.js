@@ -4,12 +4,12 @@ module.exports = function (app) {
   });
 
   app.post('/scrape', function (req, res) {
-	var url = req.body.url;
+  	var url = req.body.url;
 
-	if (!url) {
-		res.status(400).send('URL parameter is required, got ' + url);
-	} else {
-		require('./scraper.js')(url, res);
-	}
+  	if (!url) {
+  		res.status(400).send('URL parameter is required, got ' + url);
+  	} else {
+  		require('./scraper.js')(url, res);
+  	}
   });
 };

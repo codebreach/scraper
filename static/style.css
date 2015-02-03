@@ -1,0 +1,16 @@
+body {
+	max-width: 800px;
+	margin: auto;
+}
+
+h2 {
+	margin-top: 10px;
+}
+
+pre {
+  overflow-x: scroll;
+}
+
+input[type="text"] {
+  width: 100%;
+}

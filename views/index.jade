@@ -2,15 +2,11 @@ html
   head
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     title= Scraper
-
-    style(type='text/css')
-      body { padding-top: 60px; padding-bottom: 40px; }
-      .sidebar-nav { padding: 9px 0; }
+    link(rel='stylesheet', href='/static/style.css')
   body
     if (scraped)
       include info
     else 
       include hello
-    hr
     #footer.footer
       p &copy; Madhav

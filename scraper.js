@@ -1,6 +1,7 @@
 var fs = require('fs');
 var request = require('request');
 var cheerio = require('cheerio');
+var url = require('url');
 
 var extractTextFromInfoList = function($, siblingClass) {
 	return $('dt.' + siblingClass).next('.info-list__content').text();
@@ -59,6 +60,8 @@ module.exports = function(url, res) {
   		json.description = $('.ttd__section--description').text().trim();
   		json.price = getScaledPrice($);
 		  json.images = getSliderImages($);
+
+      json.prettyJson = JSON.stringify(json, null, '  ');
 
   		res.render('index.jade', {scraped: json});
     } else {

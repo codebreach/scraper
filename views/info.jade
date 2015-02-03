@@ -1,0 +1,10 @@
+h2 #{scraped.name}
+p #{scraped.description}
+ul
+  li Address- #{scraped.address}
+  li Phone- #{scraped.telephone}
+  li Website- #{scraped.website}
+  li Price- #{scraped.price}
+p
+  each image in scraped.images
+    img(src=image)

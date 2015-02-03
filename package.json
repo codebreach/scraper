@@ -1,0 +1,14 @@
+{
+  "name"         : "scraper",
+  "version"      : "0.0.1",
+  "description"  : "Scraper",
+  "main"         : "server.js",
+  "author"       : "Madhav Bhagat",
+  "dependencies" : {
+    "express"    : "latest",
+    "request"    : "latest",
+    "cheerio"    : "latest",
+    "body-parser": "latest",
+    "jade"       : "latest"
+  }
+}
